@@ -475,7 +475,7 @@ const App = () => {
     //   )}
     // </div>
     <div className="grid grid-cols-[20%,80%] gap-4">
-      <div className="bg-gray-200 sticky top-0 h-screen p-5">
+      <div className="bg-gray-200 sticky top-0 h-screen p-5 overflow-y-auto">
         <h1>Select Components</h1>
 
         {/* Header Selection */}
