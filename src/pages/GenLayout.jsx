@@ -20,6 +20,10 @@ import Ecommer from "../components/CallToAction/Ecommer";
 import Product from "../components/CallToAction/Product";
 import Bank from "../components/CallToAction/Bank";
 import App from "../components/CallToAction/App";
+import Organization from "../components/Pricing/Organization";
+import Team from "../components/Pricing/Team";
+import Personnal from "../components/Pricing/Personnal";
+import Comparator from "../components/Pricing/Comparator";
 
 const GenLayout = ({
   selectedHeader,
@@ -30,6 +34,7 @@ const GenLayout = ({
   selectedTeam,
   selectedBlog,
   selectedCTA,
+  selectedPricing,
 }) => {
   const renderHeader = () => {
     switch (selectedHeader) {
@@ -126,6 +131,21 @@ const GenLayout = ({
     }
   };
 
+  const renderPricing = () => {
+    switch (selectedPricing) {
+      case "Organization":
+        return <Organization />;
+      case "Team":
+        return <Team />;
+      case "Personnal":
+        return <Personnal />;
+      case "Comparator":
+        return <Comparator />;
+      default:
+        return null;
+    }
+  };
+
   const renderLogoCloud = () => {
     switch (selectedLogoCloud) {
       case "LogoCloud1":
@@ -164,6 +184,7 @@ const GenLayout = ({
       <div>{renderTeam()}</div>
       <div>{renderBlog()}</div>
       <div>{renderCTA()}</div>
+      <div>{renderPricing()}</div>
       {/* <div style={{ height: "300px", backgroundColor: "#f0f0f0" }}>
         Content Area
       </div> */}

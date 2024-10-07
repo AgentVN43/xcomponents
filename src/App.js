@@ -11,6 +11,7 @@ const App = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [selectedCTA, setSelectedCTA] = useState(null);
+  const [selectedPricing, setSelectedPricing] = useState(null);
 
   const [isConfirmed, setIsConfirmed] = useState(false);
 
@@ -19,7 +20,7 @@ const App = () => {
     sessionStorage.setItem("selectedHeader", selectedHeader);
     sessionStorage.setItem("selectedServices", selectedServices);
     sessionStorage.setItem("selectedLogoCloud", selectedLogoCloud);
-    
+
     sessionStorage.setItem("selectedContent", selectedContent);
     sessionStorage.setItem("selectedTeam", selectedTeam);
     sessionStorage.setItem("selectedBlog", selectedBlog);
@@ -77,7 +78,9 @@ const App = () => {
       <div>
         <h3>Select Blog:</h3>
         <button onClick={() => setSelectedBlog("ListBlog")}>List Blog |</button>
-        <button onClick={() => setSelectedBlog("CardBlog")}>Cards Blog |</button>
+        <button onClick={() => setSelectedBlog("CardBlog")}>
+          Cards Blog |
+        </button>
         <button onClick={() => setSelectedBlog("TwoColumnBlog")}>
           Two Column Blog |
         </button>
@@ -92,6 +95,18 @@ const App = () => {
         <button onClick={() => setSelectedCTA("Product")}>Product |</button>
         <button onClick={() => setSelectedCTA("Bank")}>Bank |</button>
         <button onClick={() => setSelectedCTA("App")}>App |</button>
+
+        {/* <button onClick={() => setSelectedServices("ServicesFeatures2")}>Services Features 2</button>
+        <button onClick={() => setSelectedServices("ServicesFeatures3")}>Services Features 3</button> */}
+      </div>
+
+         {/* Pricing Selection */}
+         <div>
+        <h3>Select Pricing:</h3>
+        <button onClick={() => setSelectedPricing("Organization")}>Organization |</button>
+        <button onClick={() => setSelectedPricing("Team")}>Team |</button>
+        <button onClick={() => setSelectedPricing("Personnal")}>Personnal |</button>
+        <button onClick={() => setSelectedPricing("Comparator")}>Comparator |</button>
 
         {/* <button onClick={() => setSelectedServices("ServicesFeatures2")}>Services Features 2</button>
         <button onClick={() => setSelectedServices("ServicesFeatures3")}>Services Features 3</button> */}
@@ -123,20 +138,7 @@ const App = () => {
       </div>
 
       {/* Confirm Button */}
-      <button
-        onClick={handleConfirm}
-        disabled={
-          !selectedHeader ||
-          !selectedFooter ||
-          !selectedLogoCloud ||
-          !selectedServices ||
-          !selectedContent ||
-          !selectedBlog || 
-          !selectedCTA
-        }
-      >
-        Confirm
-      </button>
+      <button onClick={handleConfirm}>Confirm</button>
 
       {/* Pass to GenLayout after confirmation */}
       {isConfirmed && (
@@ -147,6 +149,7 @@ const App = () => {
           selectedTeam={selectedTeam}
           selectedBlog={selectedBlog}
           selectedCTA={selectedCTA}
+          selectedPricing={selectedPricing}
           selectedLogoCloud={selectedLogoCloud}
           selectedFooter={selectedFooter}
         />
