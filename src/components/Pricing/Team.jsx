@@ -99,7 +99,7 @@ export default function Team() {
                         <div className="relative">
                           <input
                             defaultChecked=""
-                            hidden=""
+                            hidden="true"
                             className="peer"
                             type="radio"
                             name="devs"
@@ -122,7 +122,7 @@ export default function Team() {
                       <li>
                         <div className="relative">
                           <input
-                            hidden=""
+                            hidden="true"
                             className="peer"
                             type="radio"
                             name="devs"
@@ -145,7 +145,7 @@ export default function Team() {
                       <li>
                         <div className="relative">
                           <input
-                            hidden=""
+                            hidden="true"
                             className="peer"
                             type="radio"
                             name="devs"
@@ -168,7 +168,7 @@ export default function Team() {
                       <li>
                         <div className="relative">
                           <input
-                            hidden=""
+                            hidden="true"
                             className="peer"
                             type="radio"
                             name="devs"
