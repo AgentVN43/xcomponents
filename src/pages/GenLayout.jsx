@@ -35,6 +35,8 @@ const GenLayout = ({
   selectedBlog,
   selectedCTA,
   selectedPricing,
+  viewMode,
+  setViewMode,
 }) => {
   const renderHeader = () => {
     switch (selectedHeader) {
@@ -175,22 +177,22 @@ const GenLayout = ({
   };
 
   return (
-    <div>
-      {/* Render Header, Content, and Footer */}
-      <div>{renderHeader()}</div>
-      <div>{renderServices()}</div>
-      <div>{renderContentLeft()}</div>
-      <div>{renderContentRight()}</div>
-      <div>{renderTeam()}</div>
-      <div>{renderBlog()}</div>
-      <div>{renderCTA()}</div>
-      <div>{renderPricing()}</div>
-      {/* <div style={{ height: "300px", backgroundColor: "#f0f0f0" }}>
-        Content Area
-      </div> */}
-      <div>{renderLogoCloud()}</div>
-      <div>{renderFooter()}</div>
-    </div>
+    <div >
+    {/* Render Header, Content, and Footer */}
+    <div>{renderHeader()}</div>
+    <div>{renderServices()}</div>
+    <div>{renderContentLeft()}</div>
+    <div>{renderContentRight()}</div>
+    <div>{renderTeam()}</div>
+    <div>{renderBlog()}</div>
+    <div>{renderCTA()}</div>
+    <div>{renderPricing()}</div>
+    {/* <div style={{ height: "300px", backgroundColor: "#f0f0f0" }}>
+      Content Area
+    </div> */}
+    <div>{renderLogoCloud()}</div>
+    <div>{renderFooter()}</div>
+  </div>
   );
 };
 
